@@ -71,3 +71,12 @@ footer {
 .whatsapp-link:hover {
   background-color: #128c7e;  /* Darker Green for Hover */
 }
+.hero-image {
+  width: 100%;
+  max-width: 600px; /* Or whatever width you prefer */
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 12px; /* Optional: adds smooth rounded corners */
+}
+
