@@ -1,40 +1,94 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff8f0;
+  background-color: #faf8f0;
   color: #3e2723;
 }
+
 header {
   background-color: #ffcc80;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 }
+
+header h1 {
+  font-size: 2.5rem;
+}
+
 nav a {
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
   color: #3e2723;
+  font-weight: bold;
 }
+
+nav a:hover {
+  color: #ff7043;
+}
+
 main {
-  padding: 20px;
+  padding: 30px;
 }
+
 .product-list {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
 }
+
 .product {
-  background: #fff3e0;
-  padding: 15px;
+  background-color: #fff3e0;
+  padding: 20px;
   border-radius: 8px;
-  width: 200px;
+  width: 220px;
+  text-align: center;
 }
+
+.product h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 1rem;
+  color: #d32f2f;
+}
+
 .whatsapp-btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 25px;
   background-color: #25D366;
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-top: 15px;
+  color: #616161;
+}
+
+.cart-item {
+  margin-bottom: 15px;
+}
+
+.cart-total {
   margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.checkout-button {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
 }
