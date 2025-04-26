@@ -80,3 +80,15 @@ footer {
   border-radius: 12px; /* Optional: adds smooth rounded corners */
 }
 
+/* Add this to your style.css file */
+
+.order-time-notice {
+  font-size: 1.2em;
+  color: #d9534f; /* Red for warning */
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8d7da; /* Light red background */
+  border: 1px solid #f5c6cb; /* Red border */
+  border-radius: 5px;
+}
