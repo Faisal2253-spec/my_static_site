@@ -84,6 +84,11 @@ function checkout() {
 
   const encodedMessage = encodeURIComponent(message);
   window.open(`https://wa.me/447443973437?text=${encodedMessage}`, '_blank');
+
+  // Clear the cart after the order is placed
+  cart = []; // Empty the cart array
+  saveCart(); // Save the empty cart in localStorage
+  loadCart(); // Reload the cart (this will show the empty cart)
 }
 
 // Load cart whenever page loads
