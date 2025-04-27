@@ -1,61 +1,96 @@
+/* Global Body */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff8f0; /* light cream background */
+  color: #333; /* dark gray text */
   margin: 0;
   padding: 0;
+  line-height: 1.6; /* For better readability */
 }
 
+/* Header Section */
 header {
-  background: #d2691e;
+  background: #d2691e; /* Warm brown background */
   color: white;
-  padding: 10px;
+  padding: 20px 10px; /* Added more padding for a larger header */
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
+/* Navigation Links */
 nav a {
   color: white;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
+  font-size: 1.1rem; /* Slightly larger text for better visibility */
+  font-weight: 600; /* Bold for better emphasis */
+  text-transform: uppercase; /* Adds a bit of style */
 }
 
+nav a:hover {
+  color: #f8d7da; /* Light red on hover for a nice effect */
+}
+
+/* Hero Section */
 .hero {
   background: #f2f2f2;
-  padding: 40px;
+  padding: 60px 20px; /* Larger padding for a more spacious feel */
   text-align: center;
+  border-bottom: 4px solid #d2691e; /* Adding a subtle line at the bottom */
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555; /* A bit lighter gray for the text */
 }
 
 .hero .button {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 30px;
   background: #d2691e;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 30px; /* Slightly larger button */
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
 }
 
+.hero .button:hover {
+  background-color: #c46a45; /* Slightly darker orange for hover */
+}
+
+/* Product Section */
 .product-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
+  padding: 40px 20px; /* Spacing around the product list */
 }
 
 .product {
   border: 1px solid #ddd;
-  margin: 10px;
-  padding: 15px;
-  width: 200px;
+  margin: 15px;
+  padding: 25px;
+  width: 250px;
   text-align: center;
+  background-color: #fff; /* White background for products */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease;
 }
 
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 20px;
+.product:hover {
+  transform: translateY(-5px); /* Slight hover effect for product */
 }
 
+/* WhatsApp Link */
 .whatsapp-link {
   background-color: #25d366;  /* WhatsApp Green */
   color: white;
@@ -66,29 +101,64 @@ footer {
   font-weight: bold;
   display: inline-block;
   transition: background-color 0.3s ease;
+  margin-top: 20px; /* Added spacing */
 }
 
 .whatsapp-link:hover {
   background-color: #128c7e;  /* Darker Green for Hover */
 }
+
+/* Hero Image */
 .hero-image {
   width: 100%;
-  max-width: 600px; /* Or whatever width you prefer */
+  max-width: 650px; /* Slightly larger width */
   height: auto;
   margin: 20px auto;
   display: block;
-  border-radius: 12px; /* Optional: adds smooth rounded corners */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
 }
 
-/* Add this to your style.css file */
-
+/* Order Time Notice */
 .order-time-notice {
   font-size: 1.2em;
   color: #d9534f; /* Red for warning */
   text-align: center;
   margin-top: 20px;
-  padding: 10px;
+  padding: 15px;
   background-color: #f8d7da; /* Light red background */
   border: 1px solid #f5c6cb; /* Red border */
-  border-radius: 5px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Footer Section */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px; /* Increased spacing above footer */
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Shadow above the footer */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column; /* Stack products on smaller screens */
+  }
+
+  .product {
+    width: 90%; /* Products take up more width */
+    margin: 10px auto;
+  }
+
+  .hero h2 {
+    font-size: 2rem; /* Smaller font size for hero text */
+  }
+
+  .hero .button {
+    font-size: 1rem; /* Adjust button text size */
+    padding: 10px 20px;
+  }
 }
