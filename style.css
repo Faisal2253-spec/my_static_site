@@ -18,17 +18,39 @@ header {
 }
 
 /* Navigation Links */
+/* Style for navigation links */
 nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-size: 1.1rem; /* Slightly larger text for better visibility */
-  font-weight: 600; /* Bold for better emphasis */
-  text-transform: uppercase; /* Adds a bit of style */
+  color: white; /* Text color */
+  margin: 0 15px; /* Spacing between links */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.1rem; /* Slightly larger font for navigation links */
+  font-weight: 600; /* Make font bold */
+  text-transform: uppercase; /* Uppercase letters */
+  position: relative; /* Needed for cart badge positioning */
 }
 
+/* Style for the shopping cart icon */
+nav a .fas.fa-shopping-cart {
+  margin-left: 10px; /* Space between the text and icon */
+  font-size: 1.5rem; /* Larger icon size */
+}
+
+/* Hover effect for links */
 nav a:hover {
-  color: #f8d7da; /* Light red on hover for a nice effect */
+  color: #f8d7da; /* Change color on hover */
+}
+
+/* Cart badge (optional if you want to show the number of items in the cart) */
+nav a .cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #d9534f; /* Red background for the badge */
+  color: white;
+  border-radius: 50%; /* Circular badge */
+  padding: 5px 10px; /* Badge size */
+  font-size: 0.9rem; /* Smaller font size for the badge */
+  font-weight: bold; /* Bold font for the badge */
 }
 
 /* Hero Section */

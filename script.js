@@ -1,5 +1,14 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+// Function to update the cart badge
+function updateCartBadge() {
+  const cartBadge = document.querySelector('.cart-badge'); // Assume your cart badge has the class 'cart-badge'
+  if (cartBadge) {
+    const cartCount = cart.reduce((total, item) => total + item.quantity, 0); // Sum up the quantities
+    cartBadge.textContent = cartCount; // Update the badge text
+  }
+}
+
 function addToCart(productName, price) {
   const existingItem = cart.find(item => item.name === productName);
   if (existingItem) {
@@ -8,6 +17,7 @@ function addToCart(productName, price) {
     cart.push({ name: productName, price: price, quantity: 1 });
   }
   saveCart();
+  updateCartBadge(); // Update the cart badge when an item is added
   alert(`${productName} added to cart!`);
 }
 
@@ -48,6 +58,7 @@ function increaseQuantity(index) {
   cart[index].quantity += 1;
   saveCart();
   loadCart();
+  updateCartBadge(); // Update the cart badge when quantity increases
 }
 
 function decreaseQuantity(index) {
@@ -58,12 +69,14 @@ function decreaseQuantity(index) {
   }
   saveCart();
   loadCart();
+  updateCartBadge(); // Update the cart badge when quantity decreases
 }
 
 function removeItem(index) {
   cart.splice(index, 1);
   saveCart();
   loadCart();
+  updateCartBadge(); // Update the cart badge when an item is removed
 }
 
 function checkout() {
@@ -89,7 +102,11 @@ function checkout() {
   cart = []; // Empty the cart array
   saveCart(); // Save the empty cart in localStorage
   loadCart(); // Reload the cart (this will show the empty cart)
+  updateCartBadge(); // Update the cart badge when the cart is emptied
 }
 
 // Load cart whenever page loads
-window.onload = loadCart;
+window.onload = function() {
+  loadCart();
+  updateCartBadge(); // Ensure the cart badge is updated when the page loads
+};
